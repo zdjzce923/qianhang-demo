@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"
+    />
+    <title>Document</title>
+    <style type="text/css">
+      .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <!-- 导航栏 -->
+      <nav class="search-nav">
+        <ul class="nav-list">
+          <li><a href="#">网页</a></li>
+          <li><a href="#">图片</a></li>
+          <li><a href="#">新闻</a></li>
+          <li><a href="#">视频</a></li>
+          <li><a href="#">地图</a></li>
+        </ul>
+      </nav>
+      <form class="search" method="get" action="https://cn.bing.com/search?" target="_blank">
+        <!-- 搜索选项 -->
+        <div class="search-dropdown">
+          <a>必应</a>
+          <svg class="icon">
+            <use xlink:href="#icon-xiala"></use>
+          </svg>
+          <!-- 下拉菜单 -->
+          <div class="drop-f">
+            <ul class="dropdown-content">
+              <li><a>谷歌</a></li>
+              <li><a>必应</a></li>
+              <li><a>百度</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- 搜索内容 -->
+        <input class="methodname" type="text" name="q" id="" placeholder="请输入搜索内容" />
+        <!-- 搜索按钮 -->
+        <button class="search-btn" type="submit">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-search"></use>
+          </svg>
+        </button>
+      </form>
+    </header>
+    <main class="container">
+      <ul class="sitelist">
+        <li class="lastli">
+          <div class="logo">
+            <svg class="icon">
+              <use xlink:href="#icon-ic_add"></use>
+            </svg>
+          </div>
+          <div class="link">添加网址</div>
+        </li>
+      </ul>
+    </main>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//at.alicdn.com/t/font_2643544_89fj6bwhct6.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
