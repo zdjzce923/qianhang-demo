@@ -56,7 +56,6 @@ const searchHash = [
     4: 'https://map.baidu.com/search',
   },
 ]
-console.log(searchHash[1][0])
 render()
 $('.lastli').on('click', () => {
   let url = window.prompt('请输入要添加的网站')
@@ -77,10 +76,15 @@ for (let i = 0; i < $dropdownChildren.length; i++) {
     // 修改搜索引擎URL
     $($formAction).attr('action', searchHash[i][0])
     $($inputName).attr('name', NameAndSearch[i].name)
+    $($navList[0]).find('a').addClass('checked')
+    for (let j = 1; j < $navList.length; j++) {
+      $($navList[j]).find('a').removeClass('checked')
+    }
   })
 }
 // 点击导航栏修改action name
 for (let i = 0; i < $navList.length; i++) {
+  $($navList[0]).find('a').addClass('checked')
   let navIndex = i
   let $navA = $($navList[i]).find('a')
   $($navA).on('click', () => {

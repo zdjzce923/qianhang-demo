@@ -1,4 +1,4 @@
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 0px) {
   html {
     font-size: 16px !important;
   }
@@ -6,7 +6,7 @@
     width: 20.8125rem;
   }
   body {
-    background: url('../img/phone.jpeg') no-repeat;
+    background: url('../img/phone.jpg') no-repeat;
     background-size: cover;
     background-attachment: fixed;
   }
@@ -93,7 +93,6 @@ header > .search {
 .search-dropdown {
   border-top-left-radius: 0.9375rem;
   border-bottom-left-radius: 0.9375rem;
-
   display: flex;
   justify-content: center;
   /* margin-left: 0.3125rem; */
@@ -121,7 +120,7 @@ header > .search {
   display: none;
 }
 header .dropdown-content {
-  margin-top: 0.3125rem;
+  margin-top: 0;
   position: absolute;
   display: flex;
   justify-content: center;
