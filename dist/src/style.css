@@ -106,15 +106,23 @@ header > .search {
 .search-dropdown .icon {
   width: 0.4375rem;
 }
-.search-dropdown:hover {
-  cursor: pointer;
-  transition: 0.4s;
-  background: #494949;
+
+@media (hover: hover) {
+  .search-dropdown:hover {
+    cursor: pointer;
+    transition: 0.4s;
+    background: #494949;
+  }
+  /* 下拉菜单hover */
+  header .dropdown-content li:hover {
+    transition: 0.4s;
+    background-color: #494949;
+  }
 }
 /* 让下拉菜单显示 */
-.search-dropdown:hover .drop-f {
+/* .search-dropdown:hover .drop-f {
   display: block;
-}
+} */
 /* 下拉菜单 */
 .search .drop-f {
   display: none;
@@ -138,11 +146,7 @@ header .dropdown-content li {
 .search .dropdown-content li > a {
   color: #c0c0c0;
 }
-/* 下拉菜单hover */
-header .dropdown-content li:hover {
-  transition: 0.4s;
-  background-color: #494949;
-}
+
 .search > input {
   line-height: 2.1875rem;
   font-size: 0.9rem;

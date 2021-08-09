@@ -2,7 +2,23 @@ const $sitelist = $('.sitelist')
 const $lastli = $sitelist.find('.lastli')
 // 下拉菜单子元素
 const $dropdownChildren = $('.dropdown-content').children()
+const $dropdown = $('.search-dropdown')
+const $dropF = $('.drop-f')
 const $dropdownFirst = $('.search-dropdown').find('a')[0]
+$dropdown.on('click', e => {
+  e.stopPropagation()
+  if ($dropF.css('display') === 'none') {
+    $dropF.css('display', 'block')
+  } else {
+    $dropF.css('display', 'none')
+  }
+})
+$(document).bind('click', function (e) {
+  var target = $(e.target)
+  if (target.closest('.drop-f').length === 0) {
+    $('.drop-f').css('display', 'none')
+  }
+})
 // 获取form和input元素以便更改属性
 const $formAction = $('.search')
 const $inputName = $('.methodname')
